@@ -296,6 +296,9 @@ section{position:relative}
 .overview h5{font-size:22px;letter-spacing:-.02em}
 .overview p{color:var(--muted);font-size:17px}
 @media (max-width:700px){.overview li{grid-template-columns:40px 1fr}.overview p{grid-column:2}}
+.shots{display:grid;grid-template-columns:2.2fr 1fr;gap:16px;align-items:start}
+.shots .proj-media img{width:100%;height:auto}
+@media (max-width:760px){.shots{grid-template-columns:1fr}}
 /* path */
 .journey{list-style:none;border-top:1px solid var(--rule-dark)}
 .journey li{display:grid;grid-template-columns:180px 1fr auto;gap:30px;padding:34px 0;border-bottom:1px solid var(--rule-dark);align-items:baseline;transition:padding .35s var(--ease)}
@@ -401,9 +404,9 @@ section{position:relative}
     <g class="spin s4"><circle cx="360" cy="500" r="6" fill="#E4572E"/></g>
   </svg>
   <div class="wrap hero-inner">
-    <span class="pill-label">IT student · Full-stack &amp; UI/UX</span>
+    <span class="pill-label">IT student · UI/UX &amp; Systems</span>
     <h1><span class="line"><span>Kian Robe</span></span><span class="line"><span>Sinio<span class="dot">.</span></span></span></h1>
-    <p class="hero-tag rv">Designing and building full-stack systems. <em>Now with conversational AI.</em></p>
+    <p class="hero-tag rv">Designing and building real systems. <em>Now with conversational AI.</em></p>
     <div class="hero-foot">
       <p class="hero-intro rv d1">BSIT student at Angeles University Foundation, looking for an internship where I can build, design and ship real systems.</p>
       <div class="btns rv d2">
@@ -423,7 +426,7 @@ section{position:relative}
     <div class="portrait rv"><img src="img/kian.jpg" alt="Portrait of Kian Robe Sinio"><span class="badge">Open to internships</span></div>
     <div>
       <span class="label rv">About</span>
-      <p class="about-text rv d1">A highly motivated IT student with a strong foundation in <em>full-stack development</em>, UI/UX design and data management, from structuring core code and designing databases to leading capstone projects that bring <em>AI into healthcare.</em></p>
+      <p class="about-text rv d1">A highly motivated IT student with a strong foundation in <em>UI/UX design</em>, development and data management, from structuring core code and designing databases to leading capstone projects that bring <em>AI into healthcare.</em></p>
       <dl class="stats rv d2" id="stats"></dl>
     </div>
   </div>
@@ -505,7 +508,7 @@ section{position:relative}
     <span class="label rv">Contact</span>
     <h2 class="rv d1">Got a problem? <em>Let's build the system.</em></h2>
     <div class="contact-grid">
-      <p class="muted rv d2" style="font-size:19px;max-width:520px">I'm looking for an internship in full-stack development, UI/UX or systems work. Send me an email or connect with me on LinkedIn.</p>
+      <p class="muted rv d2" style="font-size:19px;max-width:520px">I'm looking for an internship in development, UI/UX or systems work. Send me an email or connect with me on LinkedIn.</p>
       <ul class="contact-list rv d2">
         <li><span class="k">Email</span><a class="v" href="mailto:kianrobe10@gmail.com">kianrobe10@gmail.com</a><button class="copy" data-copy="kianrobe10@gmail.com">Copy</button></li>
         <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/kian-robe-sinio-6b4701379" target="_blank" rel="noopener">kian-robe-sinio</a><button class="copy" data-copy="https://www.linkedin.com/in/kian-robe-sinio-6b4701379">Copy</button></li>
@@ -530,13 +533,13 @@ section{position:relative}
 <script>
 const D = {
   stats:[{v:4,l:"Projects on this site"},{v:5,l:"Certifications"},{v:8,l:"PDC60 modules completed"}],
-  ticker:["Full-stack development","UI/UX design","Database design","ER modeling","Routing setups","Hardware integration","Prompt engineering","Conversational UX","Agentic AI","Networking","Cybersecurity"],
+  ticker:["Web development","UI/UX design","Database design","ER modeling","Routing setups","Hardware integration","Prompt engineering","Conversational UX","Agentic AI","Networking","Cybersecurity"],
   projects:[
     {t:"SecuRx Capstone",y:"2026",s:"A capstone system that brings AI into healthcare documentation.",tags:["Capstone","AI","Healthcare"],
      pts:["Shifted the core requirements to focus on AI for voice-first SOAP notes, so healthcare professionals don't have to type them by hand.","Engineered cryptographic verification for clinical documents to keep them tamper-proof.","Managed the page directories, software quality evaluation metrics and system boundaries."]},
     {t:"RYB Vehicle Trading",y:"2026",s:"A car dealer management system for a vehicle trading business.",tags:["Management system","Database","Auth"],
      pts:["Designed and implemented the core code, structured sitemaps and secure authentication flows.","Outlined system capabilities and functional parameters, and separated user tables to keep the database fast.","Worked closely with the team to assign project responsibilities and presentation sections."]},
-    {t:"Athena AI",y:"2026",s:"A chatbot for Infliction Gym in Magalang that answers members' questions and helps them book classes.",tags:["Chatbot","Knowledge base","Team of four"],img:"img/athena-site.jpg",
+    {t:"Athena AI",y:"2026",s:"A chatbot for Infliction Gym in Magalang that answers members' questions and helps them book classes.",tags:["Chatbot","Knowledge base","Team of four"],img:"img/athena-website.jpg",
      pts:["Final project for PDC60 (MC01, group chatbot), built by a team of four on free tools.","Athena answers from a knowledge base of the gym's real schedule, coaches, membership rates and hours.","Members get answers and class bookings any time, not only when the front desk is open."],
      links:[{l:"Full project",u:"#athena"},{l:"GitHub repo",u:"https://github.com/DanielFranco0812/Athena-AI-chatbot"}]},
     {t:"Academic Study Agent",y:"2026",s:"A reusable Claude skill that organizes my course files and turns lectures into study materials.",tags:["Agentic AI","Claude skill"],
@@ -636,7 +639,7 @@ const D = {
      learned:["Chatbot on the gym's website","Knowledge base of real gym data","Helps members book classes","Built by a team of four"],
      overview:[["Project overview","A gym chatbot that answers questions and helps members book classes."],["Built and evaluated","Built by our team of four on free tools."],["Results","Answers schedule, coach, membership and sign-up questions from the gym's own data."],["Problem solved","Helps members even when the front desk is closed."]],
      acts:[{k:"MC01 · Group chatbot",t:"Athena AI for Infliction Gym",p:"A chatbot on the Infliction Gym website in Magalang, Pampanga that answers members' questions and helps them book classes, using the gym's real schedule, coaches, rates and hours.",u:"https://github.com/DanielFranco0812/Athena-AI-chatbot",ul:"GitHub repo"}],
-     img:"img/athena-site.jpg"}
+     imgs:["img/athena-website.jpg","img/athena-chat.jpg"]}
   ]
 };
 
@@ -681,6 +684,7 @@ function renderBody(m){
   h+=`<p class="sub">Activities</p><div class="acts">${m.acts.map(a=>`<div class="act"><span class="kind">${esc(a.k)}</span><h4>${esc(a.t)}</h4><p>${esc(a.p)}</p>${a.u?`<a href="${a.u}" target="_blank" rel="noopener">${a.ul||"View full work"} →</a>`:""}</div>`).join("")}</div>`;
   if(m.pairs) h+=`<p class="sub">Capability vs limitation</p><div class="pairs"><div class="pair phead"><div>What AI did well</div><div>Risk observed</div></div>${m.pairs.map(p=>`<div class="pair"><div><h5>${esc(p[0])}</h5><p>${esc(p[1])}</p></div><div><h5>${esc(p[2])}</h5><p>${esc(p[3])}</p></div></div>`).join("")}</div>`;
   if(m.steps) m.steps.forEach(st=>{h+=`<p class="sub">${esc(st.title)}</p><div class="steps">${st.items.map(it=>`<div class="step${it[4]?" final":""}"><span class="n">${esc(it[0])}${it[3]?`<i>${esc(it[3])}</i>`:""}</span><h5>${esc(it[1])}</h5><p>${esc(it[2])}</p></div>`).join("")}</div>`});
+  if(m.imgs) h+=`<p class="sub">The website and chat</p><div class="shots"><div class="proj-media"><img src="${m.imgs[0]}" alt="The Infliction Gym website" loading="lazy"></div><div class="proj-media"><img src="${m.imgs[1]}" alt="Athena AI chat helping a new member" loading="lazy"></div></div><p class="src" style="margin:12px 0 48px">The Infliction Gym site, and Athena AI helping a new member get started.</p>`;
   if(m.img) h+=`<p class="sub">The website</p><div class="proj-media" style="margin-bottom:12px"><img src="${m.img}" alt="The Infliction Gym site with Athena AI" loading="lazy"></div><p class="src" style="margin:0 0 48px">The Infliction Gym site with Athena AI, and Athena helping a new member get started.</p>`;
   if(m.figs) h+=`<p class="sub">${esc(m.figsTitle)}</p><div class="figs">${m.figs.map(f=>`<div class="fig"><b>${esc(f[0])}</b><span>${esc(f[1])}</span></div>`).join("")}</div>`;
   if(m.rules&&m.rulesFirst) h+=`<p class="sub">${esc(m.rulesLabel||"Takeaways")}</p><div class="rules-wrap" style="margin-bottom:48px"><p class="rules-head" style="padding:18px 0 4px">${m.rulesHead}</p><ol class="rules">${m.rules.map(r=>`<li>${esc(r)}</li>`).join("")}</ol></div>`;
